@@ -1,7 +1,5 @@
 package com.zartilas.abstractphonefactory.phones;
 
-import com.zartilas.abstractphonefactory.Phone;
-
 public abstract class SmartPhones extends Phone {
     private final int screenSize;
     private final int storage;
@@ -13,7 +11,6 @@ public abstract class SmartPhones extends Phone {
         return OS;
     }
 
-
     protected SmartPhones(int screenSize, int storage, int battery, String phoneNumber, String os) {
         this.screenSize = screenSize;
         this.storage = storage;
@@ -21,7 +18,6 @@ public abstract class SmartPhones extends Phone {
         this.phoneNumber = phoneNumber;
         OS = os;
     }
-
 
     @Override
     public int getScreenSize() {

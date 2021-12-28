@@ -1,4 +1,4 @@
-package com.zartilas.abstractphonefactory;
+package com.zartilas.abstractphonefactory.phones;
 
 public abstract class Phone {
     public abstract int getScreenSize();
