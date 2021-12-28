@@ -1,6 +1,6 @@
 package com.zartilas.abstractphonefactory.phones;
 
-public abstract class FeaturePhones extends Phone {
+public class FeaturePhones extends Phone {
     private final int screenSize;
     private final int storage;
     private final int battery;
