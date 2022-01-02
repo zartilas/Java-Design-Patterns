@@ -1,4 +1,4 @@
-package com.zartilas;
+package com.zartilas.observer;
 
 public class Customer {
     private String customerID;
