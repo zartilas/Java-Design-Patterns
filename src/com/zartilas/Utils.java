@@ -13,6 +13,7 @@ public class Utils {
     }
 
     public boolean checkIfNumber(Scanner num){
-        return num.hasNextInt() && num.nextInt() >= 1;
+
+        return num.hasNextInt() && num.nextInt() > 1;
     }
 }
