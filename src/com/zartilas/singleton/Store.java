@@ -1,8 +1,5 @@
 package com.zartilas.singleton;
 
-import com.zartilas.Utils;
-
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Store {
