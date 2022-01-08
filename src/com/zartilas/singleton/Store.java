@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Store {
     private static Store instance;
+    Scanner sc;
     private Store(){}
     public static Store getInstance(){
         if (instance==null)
@@ -11,21 +12,18 @@ public class Store {
         return instance;
     }
 
-    public void employee() {
-        Scanner sc = new Scanner(System.in);
+    public int employeeAsk(String askFor) {
+        sc = new Scanner(System.in);
         System.out.println("Welcome\n"
-                + "How many phones would you like?");
-        boolean isNumeric = false;
-
-        while(!isNumeric)
+                + "How many " + askFor + " would you like?");
+        while(true)
         try
         {
-            int numberOfPhones = sc.nextInt();
-            if(numberOfPhones >= 1){
-                System.out.println(numberOfPhones + " is a valid integer");
-                isNumeric = true;
+            int number = sc.nextInt();
+            if(number >= 1){
+                return number;
             }else{
-               throw new Exception();
+                throw new Exception();
             }
         } catch (Exception ime)
         {
@@ -39,31 +37,7 @@ public class Store {
             sc.nextLine();
         }
 
-        System.out.println("\nHow many customers will share the phones?");
-        boolean isNumericV2= false;
-
-        while(!isNumericV2)
-            try
-            {
-                int numberOfPhones = sc.nextInt();
-                if(numberOfPhones >= 1){
-                    System.out.println(numberOfPhones + " is a valid integer");
-                    isNumericV2 = true;
-                }else{
-                    throw new Exception();
-                }
-            } catch (Exception ime)
-            {
-                System.out.println(
-                        """
-                            ------------------------------
-                            - It is not a number or a negative value.
-                            - The value 0 is not allowed.
-                            How many phones would you like?
-                            Please enter a number:""");
-                sc.nextLine();
-            }
-
-        sc.close();
     }
+
+
 }
