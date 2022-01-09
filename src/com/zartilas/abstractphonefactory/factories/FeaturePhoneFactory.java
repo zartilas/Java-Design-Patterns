@@ -18,6 +18,6 @@ public class FeaturePhoneFactory implements PhoneAbstractFactory {
 
     @Override
     public Phone createPhone() {
-        return new FeaturePhones(screenSize,storage,battery,phoneNumber);
+        return new FeaturePhones("featurePhone",screenSize,storage,battery,phoneNumber);
     }
 }

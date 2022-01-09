@@ -1,6 +1,7 @@
 package com.zartilas.abstractphonefactory.phones;
 
 public abstract class Phone {
+    public abstract String getPhoneType();
     public abstract int getScreenSize();
     public abstract int getStorage();
     public abstract int getBattery();
@@ -12,6 +13,7 @@ public abstract class Phone {
                 +" Screen size: "+getScreenSize()
                 +" Storage: "+getStorage()
                 +" Battery: "+getBattery()
-                +" Phone number: "+getPhoneNumber();
+                +" Phone number: "+getPhoneNumber()
+                +" Phone Type: " +getPhoneType();
     }
 }

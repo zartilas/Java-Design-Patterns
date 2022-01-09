@@ -1,4 +1,5 @@
 package com.zartilas.observer;
 
-public class INotifyForPhone {
+public interface INotifyForPhone {
+    void sendMessage(String msg);
 }

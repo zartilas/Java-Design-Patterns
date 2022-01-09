@@ -15,11 +15,12 @@ public class SmartPhoneFactory implements PhoneAbstractFactory{
         this.storage = storage;
         this.battery = battery;
         this.phoneNumber = phoneNumber;
-        OS = os;
+        this.OS = os;
     }
+
 
     @Override
     public Phone createPhone() {
-        return new SmartPhones(screenSize,storage,battery,phoneNumber,OS,true);
+        return new SmartPhones("smartPhone",screenSize,storage,battery,phoneNumber,OS,true);
     }
 }

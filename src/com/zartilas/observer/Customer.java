@@ -1,6 +1,6 @@
 package com.zartilas.observer;
 
-public class Customer {
+public class Customer implements INotifyForPhone {
     private String customerID;
     private String randomPhone;
     private boolean gotPhone = false;
@@ -33,5 +33,10 @@ public class Customer {
 
     public void setGotPhone(boolean gotPhone) {
         this.gotPhone = gotPhone;
+    }
+
+    @Override
+    public void sendMessage(String msg) {
+        System.out.println("You are phone is ready!!");
     }
 }

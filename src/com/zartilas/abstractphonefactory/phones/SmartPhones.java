@@ -1,6 +1,7 @@
 package com.zartilas.abstractphonefactory.phones;
 
 public class SmartPhones extends Phone {
+    private final String phoneType;
     private final int screenSize;
     private final int storage;
     private final int battery;
@@ -16,13 +17,14 @@ public class SmartPhones extends Phone {
         return Camera;
     }
 
-    public SmartPhones(int screenSize, int storage, int battery, String phoneNumber, String os, boolean camera) {
+    public SmartPhones(String phoneType, int screenSize, int storage, int battery, String phoneNumber, String os, boolean camera) {
+        this.phoneType =phoneType;
         this.screenSize = screenSize;
         this.storage = storage;
         this.battery = battery;
         this.phoneNumber = phoneNumber;
         OS = os;
-        Camera = camera;
+        this.Camera = camera;
     }
 
     @Override
@@ -50,6 +52,11 @@ public class SmartPhones extends Phone {
         return super.toString()
                 +"OS: "+getOS()
                 +"Camera: " +getCAMERA();
+    }
+
+    @Override
+    public String getPhoneType() {
+        return phoneType;
     }
 }
 
