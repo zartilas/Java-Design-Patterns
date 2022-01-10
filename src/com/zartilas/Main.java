@@ -52,7 +52,6 @@ public class Main {
             staff.removeCustomer(cstmr); //removed customer from list (INotifyForPhones)
             for (int i = 0; i < phones.size(); i++) {
                 if (cstmr.getRandomPhone().equals(SMARTPHONE)) {
-
                     if (phones.get(i).getPhoneType().equals(SMARTPHONE)) {
                         staff.notifyPhone(SMARTPHONE);
                         phones.remove(i);
@@ -62,7 +61,6 @@ public class Main {
                         System.out.println();
                         break;
                     }
-
                 } else if (cstmr.getRandomPhone().equals(FEATURE_PHONE)) {
                     if (phones.get(i).getPhoneType().equals(FEATURE_PHONE)) {
                         staff.notifyPhone(FEATURE_PHONE);
@@ -77,14 +75,11 @@ public class Main {
             }
         }
 
-
         System.out.println("\n--------------------------------------------------\n");
         for (Customer cstmr : customers) {
             if (!cstmr.isGotPhone())
                 customerWithOutPhone++;
         }
         System.out.println("Customers with out phones: " + customerWithOutPhone);
-
     }
-
 }
