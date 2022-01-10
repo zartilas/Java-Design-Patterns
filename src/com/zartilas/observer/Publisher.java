@@ -13,6 +13,7 @@ public class Publisher {
     public void removeCustomer(INotifyForPhone iNotifyForPhone) {
         this.interestedCustomers.remove(iNotifyForPhone);
     }
+
     public void notifyPhone(String typePhone) {
         for (INotifyForPhone iNotifyForPhone: this.interestedCustomers) {
             iNotifyForPhone.sendMessage("A new " + typePhone +" phone is available!");
