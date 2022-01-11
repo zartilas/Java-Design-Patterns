@@ -4,8 +4,8 @@ import com.zartilas.abstractphonefactory.phones.Phone;
 import com.zartilas.observer.Customer;
 import com.zartilas.observer.Publisher;
 import com.zartilas.singleton.Store;
-
 import java.util.*;
+
 public class Main {
 
     public static void main(String[] args) {
